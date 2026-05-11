@@ -8,6 +8,8 @@ for i, linha in enumerate(temperaturas):
         somas.append(sum(temperaturas[i]))
         medidor.append(m)
 
+maiorRisco = max(medidor)
+sala_maior_risco = medidor.index(maiorRisco)
 
 for j in range(len(somas)):
     medias.append(somas[j]/4)
@@ -18,3 +20,5 @@ for s in range(len(temperaturas)):
     print(f"Média: {medias[s]}")
     print(f"Registros críticos: {medidor[s]}")
     print()
+
+print(f"Sala com maior risco: Sala {sala_maior_risco + 1}")
