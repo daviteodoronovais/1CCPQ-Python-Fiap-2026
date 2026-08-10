@@ -55,10 +55,11 @@ for i in range(len(endpoints)):
 
     sucessos, erros, percdntual, classificacao = analisarEndpoint(statusEndpoint)
 
+    print()
     print("-" * 30)
     print(f"Endpoint: {nomeEndpoint}")
     print(f"Sucessos: {sucessos}")
-    print(f"Erros: {erros} \n")
+    print(f"Erros: {erros}")
     print(f"Percentual de Sucesso: {percdntual:.1f}%")
     print(f"Classificacao: {classificacao}")
 
@@ -67,5 +68,6 @@ for i in range(len(endpoints)):
         maisErros = erros
         endpointMaisErros = nomeEndpoint
 
+print()
 print("-" * 30)
 print(f"Endpoint com mais erros: {endpointMaisErros} com ({maisErros}) erros \n")
